@@ -84,19 +84,19 @@ const ForClientsPage = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-green-100 py-20 px-4 mt-20">
+      <section className="bg-gradient-to-br from-green-50 to-green-100 py-12 sm:py-20 px-4 mt-20">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-green-900 mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-green-900 mb-4 sm:mb-6">
             Hire with Confidence
           </h1>
-          <p className="text-xl text-green-700 mb-8">
+          <p className="text-lg sm:text-xl text-green-700 mb-6 sm:mb-8 px-2">
             Connect with trained, certified, and reliable workers for all your
             household and business needs. Every worker on JobzaR has completed
             our comprehensive training program.
           </p>
           <Button
             size="lg"
-            className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-lg"
+            className="bg-green-600 hover:bg-green-700 text-white px-6 py-4 text-base sm:px-8 sm:py-6 sm:text-lg"
           >
             Find Workers Now
           </Button>
@@ -104,20 +104,24 @@ const ForClientsPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4">
+      <section className="py-12 sm:py-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
             Why Clients Choose JobzaR
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {benefits.map((benefit, index) => (
               <Card key={index} className="text-center">
                 <CardHeader>
                   <div className="flex justify-center mb-4">{benefit.icon}</div>
-                  <CardTitle>{benefit.title}</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl">
+                    {benefit.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">{benefit.description}</p>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    {benefit.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}

@@ -13,9 +13,9 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   return (
     <section className="relative w-full bg-gradient-to-br from-blue-50 to-blue-100 min-h-[600px] flex items-center py-16 px-4 md:px-8 lg:px-16 overflow-hidden">
-      {/* Background overlay with subtle pattern */}
+      {/* Background overlay with cleaning service image */}
       <div className="absolute inset-0 bg-opacity-10 bg-blue-200 z-0">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=70')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/images/ChatGPT Image Sep 8, 2025, 09_49_38 AM.png')] bg-cover bg-center opacity-15"></div>
       </div>
 
       {/* Content container */}
@@ -49,7 +49,7 @@ const HeroSection = ({
           >
             <Button
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-base"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 text-sm sm:px-8 sm:py-6 sm:text-base"
               onClick={onWorkerCTAClick}
             >
               Start Your Journey
@@ -57,7 +57,7 @@ const HeroSection = ({
             <Button
               size="lg"
               variant="outline"
-              className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-6 text-base"
+              className="border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-4 text-sm sm:px-8 sm:py-6 sm:text-base"
               onClick={onClientCTAClick}
             >
               Hire with Confidence
@@ -74,19 +74,19 @@ const HeroSection = ({
           transition={{ duration: 0.8, delay: 0.6 }}
           className="relative"
         >
-          <div className="w-[500px] h-[400px] bg-[url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80')] bg-cover bg-center rounded-l-3xl shadow-xl opacity-90"></div>
-          <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-[url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&q=80')] bg-cover bg-center rounded-xl shadow-lg border-4 border-white"></div>
+          <div className="w-[500px] h-[400px] bg-[url('/images/Gemini_Generated_Image_es3n0yes3n0yes3n.png')] bg-cover bg-center rounded-l-3xl shadow-xl opacity-90"></div>
+          <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-[url('/images/ChatGPT Image Sep 8, 2025, 09_49_38 AM.png')] bg-cover bg-center rounded-xl shadow-lg border-4 border-white"></div>
         </motion.div>
       </div>
 
       {/* Mobile image (visible on smaller screens) */}
-      <div className="lg:hidden w-full mt-12">
+      <div className="lg:hidden w-full mt-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <div className="w-full h-48 bg-[url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80')] bg-cover bg-center rounded-xl shadow-lg mx-auto max-w-sm"></div>
+          <div className="w-full h-40 sm:h-48 bg-[url('/images/Gemini_Generated_Image_es3n0yes3n0yes3n.png')] bg-cover bg-center rounded-xl shadow-lg mx-auto max-w-sm"></div>
         </motion.div>
       </div>
     </section>

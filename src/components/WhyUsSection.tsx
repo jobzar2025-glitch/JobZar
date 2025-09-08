@@ -44,22 +44,22 @@ const WhyUsSection = () => {
 
   return (
     <section
-      className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50"
+      className="py-12 sm:py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50"
       id="why-us"
     >
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             Why Choose JobzaR?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-2">
             We're more than just a job platform - we're a movement to empower
             South Africa's workforce and create meaningful connections between
             skilled workers and those who need their services.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {reasons.map((reason, index) => (
             <Card
               key={index}
@@ -67,10 +67,12 @@ const WhyUsSection = () => {
             >
               <CardHeader className="text-center">
                 <div className="flex justify-center mb-4">{reason.icon}</div>
-                <CardTitle className="text-lg">{reason.title}</CardTitle>
+                <CardTitle className="text-base sm:text-lg">
+                  {reason.title}
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center">
+                <p className="text-gray-600 text-center text-sm sm:text-base">
                   {reason.description}
                 </p>
               </CardContent>
@@ -78,12 +80,12 @@ const WhyUsSection = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-white rounded-lg p-8 shadow-md max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">
+        <div className="mt-12 sm:mt-16 text-center">
+          <div className="bg-white rounded-lg p-6 sm:p-8 shadow-md max-w-4xl mx-auto">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">
               Our Mission
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
               To create a thriving ecosystem where every South African has
               access to dignified work opportunities and quality services. We
               believe that by investing in training and certification, we can
