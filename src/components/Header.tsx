@@ -9,6 +9,22 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleWorkerCTA = () => {
+    // Scroll to process section and open WhatsApp
+    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      window.open("https://wa.me/27611565699?text=Hi! I'm interested in starting my journey as a worker with JobzaR. Can you help me get started?", "_blank");
+    }, 1000);
+  };
+
+  const handleClientCTA = () => {
+    // Scroll to process section and open WhatsApp
+    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      window.open("https://wa.me/27611565699?text=Hi! I'm interested in hiring skilled workers through JobzaR. Can you help me find the right person?", "_blank");
+    }, 1000);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -32,13 +48,13 @@ const Header = () => {
             How it Works
           </a>
           <a
-            href="/for-workers"
+            href="#how-it-works"
             className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
           >
             For Workers
           </a>
           <a
-            href="/for-clients"
+            href="#how-it-works"
             className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
           >
             For Clients
@@ -62,13 +78,13 @@ const Header = () => {
           <Button
             variant="outline"
             className="text-sm"
-            onClick={() => (window.location.href = "/for-workers")}
+            onClick={handleWorkerCTA}
           >
             Start Your Journey
           </Button>
           <Button
             className="text-sm"
-            onClick={() => (window.location.href = "/for-clients")}
+            onClick={handleClientCTA}
           >
             Hire with Confidence
           </Button>
@@ -98,14 +114,14 @@ const Header = () => {
                 🚀 How it Works
               </a>
               <a
-                href="/for-workers"
+                href="#how-it-works"
                 className="block text-lg font-semibold text-gray-800 hover:text-blue-600 transition-all duration-300 py-3 px-4 rounded-xl hover:bg-blue-50 hover:shadow-sm transform hover:scale-105"
                 onClick={toggleMenu}
               >
                 💼 For Workers
               </a>
               <a
-                href="/for-clients"
+                href="#how-it-works"
                 className="block text-lg font-semibold text-gray-800 hover:text-green-600 transition-all duration-300 py-3 px-4 rounded-xl hover:bg-green-50 hover:shadow-sm transform hover:scale-105"
                 onClick={toggleMenu}
               >
@@ -132,13 +148,19 @@ const Header = () => {
               <Button
                 variant="outline"
                 className="w-full h-14 text-lg font-bold border-2 border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105"
-                onClick={() => (window.location.href = "/for-workers")}
+                onClick={() => {
+                  toggleMenu();
+                  handleWorkerCTA();
+                }}
               >
                 🎯 Start Your Journey
               </Button>
               <Button
                 className="w-full h-14 text-lg font-bold bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105"
-                onClick={() => (window.location.href = "/for-clients")}
+                onClick={() => {
+                  toggleMenu();
+                  handleClientCTA();
+                }}
               >
                 ✨ Hire with Confidence
               </Button>
