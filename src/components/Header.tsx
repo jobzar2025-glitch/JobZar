@@ -10,19 +10,11 @@ const Header = () => {
   };
 
   const handleWorkerCTA = () => {
-    // Scroll to process section and open WhatsApp
-    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
-    setTimeout(() => {
-      window.open("https://wa.me/27611565699?text=Hi! I'm interested in starting my journey as a worker with JobzaR. Can you help me get started?", "_blank");
-    }, 1000);
+    window.location.href = '/for-workers';
   };
 
   const handleClientCTA = () => {
-    // Scroll to process section and open WhatsApp
-    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
-    setTimeout(() => {
-      window.open("https://wa.me/27611565699?text=Hi! I'm interested in hiring skilled workers through JobzaR. Can you help me find the right person?", "_blank");
-    }, 1000);
+    window.location.href = '/for-clients';
   };
 
   return (
@@ -30,13 +22,10 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="/" className="flex items-center space-x-2">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">J</span>
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <a href="/" className="flex items-center">
+            <div className="text-2xl md:text-3xl font-bold text-black">
               JobzaR
-            </span>
+            </div>
           </a>
         </div>
 
@@ -49,13 +38,13 @@ const Header = () => {
             How it Works
           </a>
           <a
-            href="#how-it-works"
+            href="/for-workers"
             className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
           >
             For Workers
           </a>
           <a
-            href="#how-it-works"
+            href="/for-clients"
             className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
           >
             For Clients
@@ -115,14 +104,14 @@ const Header = () => {
                 🚀 How it Works
               </a>
               <a
-                href="#how-it-works"
+                href="/for-workers"
                 className="block text-lg font-semibold text-gray-800 hover:text-blue-600 transition-all duration-300 py-3 px-4 rounded-xl hover:bg-blue-50 hover:shadow-sm transform hover:scale-105"
                 onClick={toggleMenu}
               >
                 💼 For Workers
               </a>
               <a
-                href="#how-it-works"
+                href="/for-clients"
                 className="block text-lg font-semibold text-gray-800 hover:text-green-600 transition-all duration-300 py-3 px-4 rounded-xl hover:bg-green-50 hover:shadow-sm transform hover:scale-105"
                 onClick={toggleMenu}
               >
