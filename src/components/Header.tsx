@@ -30,12 +30,13 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="/" className="flex items-center">
-            <img
-              src="/images/Gemini_Generated_Image_wz1npnwz1npnwz1n.png"
-              alt="JobzaR Logo"
-              className="h-16 md:h-20 w-auto font-bold drop-shadow-lg hover:scale-105 transition-transform duration-200"
-            />
+          <a href="/" className="flex items-center space-x-2">
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">J</span>
+            </div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+              JobzaR
+            </span>
           </a>
         </div>
 
